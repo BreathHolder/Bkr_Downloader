@@ -38,8 +38,11 @@ class LoggerTable:
     """
 
     def __init__(
-        self, max_rows=4, title_color="light_cyan3", border_style="cyan"
+        self, max_rows=4,
+        title_color="light_cyan3",
+        border_style="cyan"
     ):
+        """Initialize the LoggerTable."""
         # Circular buffer for scrolling rows
         self.row_buffer = deque(maxlen=max_rows)
 

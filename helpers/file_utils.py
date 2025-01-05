@@ -4,6 +4,9 @@ includes methods to read the contents of a file and to write content to a file,
 with optional support for clearing the file.
 """
 
+import os
+import json
+
 SESSION_LOG = "session_log.txt"
 
 def read_file(filename):

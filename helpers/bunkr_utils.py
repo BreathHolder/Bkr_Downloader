@@ -149,7 +149,6 @@ def main():
     download_link = "https://milkshake.bunkr.ru/-Harem-Camp----08--1080p-UNC--DFpqZR4L.mkv"
     bunkr_status = get_bunkr_status()
     subdomain = mark_subdomain_as_offline(bunkr_status, download_link)
-
     print(f"Subdomain {subdomain} has been marked as offline.")
     print(f"Updated status: {bunkr_status}")
     print(f"Updated offline servers: {get_offline_servers(bunkr_status)}")

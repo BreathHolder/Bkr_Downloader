@@ -33,23 +33,15 @@ def get_chunk_size(file_size):
 def save_file_with_progress(response, download_path, task, progress_manager):
     """
     Saves the file from the response to the specified path while updating
-    the download progress.
+    the progress.
 
     Args:
         response (Response): The response object containing the file data.
         download_path (str): The path where the file will be saved.
-        task (Task): The task object representing the current download task.
-        progress_manager (ProgressManager): An object responsible for managing
-                                            and updating task progress.
-
-    Raises:
-        ValueError: If the content length is not provided in the response
-                    headers.
+        task_info (tuple): A tuple containing job progress, task, and other
+                           info.
     """
     file_size = int(response.headers.get("content-length", -1))
-    if file_size == -1:
-        raise ValueError("Content length not provided in response headers.")
-
     chunk_size = get_chunk_size(file_size)
     total_downloaded = 0
 

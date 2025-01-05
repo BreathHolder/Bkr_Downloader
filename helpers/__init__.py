@@ -8,6 +8,8 @@ Modules:
     - download_utils: Functions for handling downloads.
     - file_utils: Utilities for managing file operations.
     - general_utils: Miscellaneous utility functions.
+    - playwright_crawler: Module that utilizes Playwright to automate media
+                          crawling from Bunkr.
     - url_utils: Utilities to analyze and extract details from URLs.
 
 This package is designed to be reusable and modular, allowing its components 
@@ -21,5 +23,6 @@ __all__ = [
     "download_utils",
     "file_utils",
     "general_utils",
+    "playwright_crawler",
     "url_utils"
 ]
